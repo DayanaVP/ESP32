@@ -1,0 +1,16 @@
+
+const int analogPin1 = 25;  // Pin GPIO25 en el ESP32
+
+
+void setup() {
+  // solo una vez
+Serial.begin(9600);             Llamar al monitos serial 
+pinMode(analogPin1,INPUT);      
+
+}
+
+void loop() {
+  // siempre se repite
+int sensor1=analogRead(analogPin1);
+Serial.println(sensor1);
+delay(1000);
